@@ -1,0 +1,220 @@
+>>> To check installed packages
+
+	 apt list --installed
+
+>>> To uninstall any program
+
+	 sudo apt remove -[name]
+
+>>> To kill a process
+
+	 sudo xkill (gives a option to kill by mouse pointer)
+	
+	 ps -e (to get all running processes)
+	
+	 kill -[id]
+	
+	 pkill -[name]
+	
+	 killall -[name]
+		
+>>> To get public ip address
+
+	 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+	
+	 dig +short myip.opendns.com @resolver1.opendns.com
+	
+>>> To open any text documents in termianl
+
+	 nano -[filename]
+	
+>>> To install java
+	
+	#Default open source version
+	
+		 sudo apt install default-jre
+		 sudo apt install default-jdk
+		 
+	#For Oracle Java
+	
+		sudo dpkg -i jdk-11.0.7_linux-x64_bin.deb
+	
+>>> For changing java versions
+
+	 sudo update-alternatives --config java
+	
+	#To set path to Oracle java executable	
+   sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-11.0.8/bin/java 1
+   sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-11.0.8/bin/javac 1
+	
+>>> To install Visual Studio Code
+
+	 sudo snap install --classic code
+	
+	#For VS code
+
+       "C_Cpp.updateChannel": "Insiders",
+       "code-runner.runInTerminal": true,
+       "files.autoSave": "afterDelay",
+       
+>>> For enabling app minimize on apps on dock
+	
+	 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+	
+>>> To install google chrome
+
+	 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	
+	 sudo apt install ./google-chrome-stable_current_amd64.deb
+	
+>>> To install Avro Bangla Keyboard
+
+	 wget "https://github.com/ugcoder/avro/releases/download/v2.0/avro_2.0-1_all.deb"
+	
+	 sudo dpkg -i avro_2.0-1_all.deb
+	
+	#If you get any dependency error, then also run the following command:
+		
+		 sudo apt-get install -fy
+	
+	 ibus restart
+		
+>>> To install media codecs
+
+	 sudo apt install ubuntu-restricted-extras
+	
+>>> To install VLC media player
+
+	 sudo apt install vlc
+	
+	 sudo apt install vlc-plugin-access-extra libbluray-bdj libdvdcss2 (extra plug-in)
+	
+>>> To install PulseEffects
+
+	 sudo add-apt-repository ppa:mikhailnov/pulseeffects
+	
+	 sudo apt update
+	
+	 sudo apt install pulseaudio pulseeffects --install-recommends
+	
+>>> Failure to download extra data files - ttf-mscorefonts-installer [solve]
+
+	 sudo apt purge ttf-mscorefonts-installer
+	
+>>> To enable DvD support
+
+	 sudo apt install libdvd-pkg
+	
+	 sudo dpkg-reconfigure libdvd-pkg
+	
+>>> To enable Flatpak support
+
+	 sudo apt install flatpak
+	
+	 sudo apt install gnome-software-plugin-flatpak
+	
+>>> To install Intelij
+
+	 sudo snap install intellij-idea-community --classic
+	
+>>> To install Android Studio
+
+	 sudo snap install android-studio --classic
+	 sudo apt-get install adb
+	
+>>> To install Zoom-Client
+
+	 sudo snap install zoom-client
+	
+>>> To install Chrome Gnome Shell
+
+	 sudo apt install chrome-gnome-shell
+	
+>>> To install Gnome tweak tool
+
+	 sudo apt install gnome-tweak-tool
+	
+>>> To install Notepad++
+
+	 sudo snap install notepad-plus-plus
+	
+>>> Git config
+
+	 git config --global user.name -["username"]
+	 git config --global user.email -["email"]
+	
+>>> To install spotify
+
+	 sudo snap install spotify
+
+>>> To download ubuntu 20.04 lts iso file
+
+	 wget https://releases.ubuntu.com/20.04/ubuntu-20.04-desktop-amd64.iso
+	 
+>>> Link for downloading windows ISO
+
+	https://www.microsoft.com/en-in/software-download/windows10ISO	
+	
+>>> To use MongoDB
+
+	#To start mongod
+	 sudo systemctl start mongod
+
+	#To see mongod status
+	 sudo systemctl status mongod
+
+	#To optionally ensure that MongoDB will start following a system reboot
+	 sudo systemctl enable mongod
+
+	#To stop mongod
+	 sudo systemctl stop mongod
+
+	#To restart mongod
+	 sudo systemctl restart mongod
+
+	#To start using MongoDB
+	 mongo
+
+>>> To repair grub boot loader
+	
+	 sudo add-apt-repository ppa:yannubuntu/boot-repair
+	 sudo apt-get update
+	 sudo apt-get install -y boot-repair && boot-repair
+	
+>>>> To install Indicator Sticky Notes
+
+	sudo add-apt-repository ppa:umang/indicator-stickynotes
+	sudo apt-get update
+	sudo apt-get install indicator-stickynotes
+
+>>> To install XDM
+
+	sudo apt update && sudo apt upgrade
+	wget https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz
+	tar -xf xdm-setup-7.2.11.tar.xz
+	sudo ./install.sh
+	
+>>> To install dconf-editor
+	
+	sudo apt install dconf-editor
+	
+>>> To clear Read-Only Status
+
+	sudo chown -R myusername my-project-folder
+	
+	#example
+		sudo chown -R 'hasib718' '/mnt/Work & Soft/PROJECTS'
+		
+>>> To install nodejs
+	
+	#Open NodeJs
+	sudo apt update
+	sudo apt install nodejs npm
+	nodejs --version
+
+	#
+	curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+	sudo apt install nodejs
+	sudo apt install build-essential
+		
+		

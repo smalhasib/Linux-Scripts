@@ -1,0 +1,53 @@
+>>>> For update
+	
+	$ sudo pacman -Syu
+	
+>>> For upgrade
+
+	$ sudo pacman -Syy
+	
+>>> For installing AUR
+
+	$ sudo pacman -S yay
+	
+>>> Some Packages (Essential)
+
+	$ sudo pacman -S base-devel
+	
+>>> For installing git
+
+	$ sudo pacman -S git
+	
+>>> For installing Google Chrome (Aftering installing Aur & essentials)
+
+	$ yay -S google-chrome
+	
+>>> Installing Snap
+
+	$ sudo pacman -S snapd
+	$ sudo systemctl enable --now snapd.socket
+	$ sudo ln -s /var/lib/snapd/snap /snap
+	
+>>> To check java status
+
+	$ archlinux-java status
+	
+>>> TO run apps as root
+
+    $ kdesu applicationName
+
+    
+>>> For java 
+
+    #Make Directory jvm
+    
+        $ sudo mkdir /usr/lib/jvm
+        
+    #Copy jdk folder to jvm folder
+    
+        $ sudo cp - r jdk-11.0.8 /usr/lib/jvm/jdk-11.0.8
+        
+
+>>> For vs code keyring problem solution;-
+
+        $ sudo pacman -Sy gnome-keyring libsecret
