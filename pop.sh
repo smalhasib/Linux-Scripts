@@ -12,7 +12,7 @@ done
 
 sudo apt update && sudo apt -y upgrade
 
-sudo apt install -y gdebi wget curl dpkg zip unzip v4l-utils apt-transport-https ubuntu-restricted-extras chrome-gnome-shell gnome-tweak-tool vlc vlc-plugin-access-extra libbluray-bdj git-all nodejs npm default-jre default-jdk qbittorrent dconf-editor okular telegram-desktop screenfetch neofetch lolcat code vim htop cmatrix shotwell zsh tldr
+sudo apt install -y gdebi wget curl dpkg zip unzip v4l-utils apt-transport-https ubuntu-restricted-extras chrome-gnome-shell gnome-tweak-tool vlc vlc-plugin-access-extra libbluray-bdj git-all nodejs npm default-jre default-jdk qbittorrent dconf-editor okular telegram-desktop screenfetch neofetch lolcat code vim htop cmatrix shotwell zsh tldr xclip xsel
 
 tldr -u
 git config --global user.name "S M Al Hasib"
