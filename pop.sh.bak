@@ -1,10 +1,7 @@
 #!/bin/bash
 
 #Removing Softwares I don't like
-sudo apt remove -y libreoffice-common libreoffice-draw libreoffice-calc libreoffice-math libreoffice-writer libreoffice-impress firefox geary
-
-#Updating mirror
-sudo sed -i 's/us.archive.ubuntu/mirror.dhakacom/g' /etc/apt/sources.list.d/system.sources
+sudo apt remove libreoffice-common libreoffice-draw libreoffice-calc libreoffice-math libreoffice-writer libreoffice-impress firefox geary
 
 sudo apt update && sudo apt -y upgrade
 sudo apt --purge -y autoremove
@@ -17,7 +14,7 @@ done
 sudo apt update && sudo apt -y upgrade
 
 #Installing necessary softwares
-sudo apt install -y gdebi wget curl dpkg zip unzip v4l-utils apt-transport-https ubuntu-restricted-extras chrome-gnome-shell gnome-tweak-tool vlc vlc-plugin-access-extra libbluray-bdj git-all nodejs npm default-jre default-jdk qbittorrent dconf-editor okular telegram-desktop screenfetch neofetch lolcat code vim htop cmatrix shotwell zsh tldr xclip xsel thunderbird adb qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager ssh
+sudo apt install -y gdebi wget curl dpkg zip unzip v4l-utils apt-transport-https ubuntu-restricted-extras chrome-gnome-shell gnome-tweak-tool vlc vlc-plugin-access-extra libbluray-bdj git-all nodejs npm default-jre default-jdk qbittorrent dconf-editor okular telegram-desktop screenfetch neofetch lolcat code vim htop cmatrix shotwell zsh tldr xclip xsel thunderbird adb qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager
 
 #Necessary update
 tldr -u
@@ -46,16 +43,10 @@ sudo apt update && sudo apt -y upgrade
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 for flats in us.zoom.Zoom com.google.AndroidStudio com.jetbrains.IntelliJ-IDEA-Community com.microsoft.Teams com.discordapp.Discord
 do
-	flatpak install -y flathub $flats
+	flatpak install -y --noninteractive flathub $flats
 done
 
-# Installing Gnome Shell extension
-git clone https://github.com/0ry0n/Resource_Monitor
-cd Resource_Monitor
-mv Resource_Monitor@Ory0n ~/.local/share/gnome-shell/extensions/Resource_Monitor@Ory0n
-gnome-extensions enable Resource_Monitor@Ory0n
-
-sudo apt remove -y kdeconnect
+sudo apt remove kdeconnect
 sudo apt autoclean
 sudo apt -y autoremove
 
